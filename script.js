@@ -71,7 +71,7 @@ function renderNotes() {
     notesContainer.innerHTML = '';
     const query = searchBar.value.toLowerCase().trim();
 
-    // Filter notes dynamically on search matches
+
     const filteredNotes = notes.filter(note => 
         note.title.toLowerCase().includes(query) || 
         note.body.toLowerCase().includes(query)
