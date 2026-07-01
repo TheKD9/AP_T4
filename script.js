@@ -1,4 +1,4 @@
-// UI State Elements
+
 const noteTitle = document.getElementById('note-title');
 const noteBody = document.getElementById('note-body');
 const saveBtn = document.getElementById('save-btn');
@@ -115,7 +115,6 @@ function syncStorage() {
     localStorage.setItem('notebook_pro_data', JSON.stringify(notes));
 }
 
-// XSS Protection Sanitizer
 function escapeHTML(str) {
     return str.replace(/[&<>'"]/g, 
         tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
