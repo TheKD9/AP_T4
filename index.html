@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">Notebook <span>Pro</span></div>
+            
+            <div class="note-form">
+                <h3>Create New Note</h3>
+                <input type="text" id="note-title" placeholder="Title..." maxlength="50">
+                <textarea id="note-body" placeholder="Start typing your note..." rows="5"></textarea>
+                
+                <div class="category-selector">
+                    <label>Category:</label>
+                    <div class="color-options">
+                        <span class="color-dot personal active" data-color="personal" title="Personal"></span>
+                        <span class="color-dot work" data-color="work" title="Work"></span>
+                        <span class="color-dot ideas" data-color="ideas" title="Ideas"></span>
+                    </div>
+                </div>
+                
+                <button id="save-btn">Save Note</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-wrapper">
+                    <input type="text" id="search-bar" placeholder="Search notes by keyword...">
+                </div>
+                <div class="view-toggle-wrapper">
+                    <button id="grid-view-btn" class="toggle-btn active" title="Grid View">
+                        Grid
+                    </button>
+                    <button id="list-view-btn" class="toggle-btn" title="List View">
+                        List
+                    </button>
+                </div>
+            </header>
+
+            <div id="notes-container" class="notes-grid"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
